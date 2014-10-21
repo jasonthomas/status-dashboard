@@ -58,4 +58,4 @@ class ServiceList(Resource):
         self.keyprefix = '/services/'
 
     def get(self):
-        return self.conn.keys('{0}*'.format(self.keyprefix))
+        return {"services": self.conn.keys('{0}*'.format(self.keyprefix))}
